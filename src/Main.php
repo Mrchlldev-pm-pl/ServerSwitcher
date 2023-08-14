@@ -28,9 +28,9 @@ class Main extends PluginBase{
 
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
     switch($command->getName()) {
-        case "server":
+        case "goto":
             if(count($args) !== 1) {
-                $sender->sendMessage("§4/server <name>");
+                $sender->sendMessage("§4/goto <name>");
                 return false;
             }
             $config = new Config($this->getDataFolder() . "servers.yml", Config::YAML);
